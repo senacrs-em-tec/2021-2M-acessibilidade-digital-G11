@@ -1,0 +1,146 @@
+:root{
+  --orangered: #FF4500;
+}
+@font-face {
+  font-family: 'OpenDyslexicRegular'; 
+  src: url('./fonts/otf/OpenDyslexic-Regular.otf') format('opentype');
+  src:   url('./fonts/woff/OpenDyslexic-Regular.woff') format('woff'),
+         url('./fonts/ttf/OpenDyslexic-Regular.ttf') format('truetype'),
+         url('./fonts/svg/OpenDyslexic-Regular.svg#opendyslexicregular') format('svg');
+}  
+
+body {
+  
+  font-family:'OpenDyslexicRegular' ;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  font-size: 12pt;
+  margin: 0;
+  background-color: #B0C4DE;
+}
+
+#navbar{
+  width: 99,5vw;
+  height: 58px;
+  background-color: #4682B4;
+  font-weight: bold;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1em 0;
+}
+
+li a{
+  color: #D3D3D3;
+  padding-right: 10px;
+  position: relative;
+  text-decoration: none;
+  transition: all ease-in-out 250ms;
+}
+
+li a::after{
+  content:'';
+  position: absolute;
+  display: block;
+  height: 0.4em;
+  width: 0%;
+  background-color:var(--orangered);
+  bottom: -1em;
+  transition: all ease-in-out 150ms;
+  border-radius: 10px;
+}
+
+li a:hover::after{
+  position: absolute;
+  width: 75px;
+}
+
+#li-1 a:hover::after{
+  width: 95%;
+}
+#li-2 a:hover::after{
+  width: 89%;
+}
+#li-3 a:hover::after{
+  width: 87%;
+}
+
+li a:hover{
+  color:var(--orangered);
+  
+}
+
+li:first-child{
+  margin-right: auto;
+  margin-left: 1em;
+  
+}
+
+#corpo{
+  align-items: center;
+  padding: 0% 20%;
+}
+
+#noticias{
+  text-align-last: center;
+  
+}text{
+  text-align: center;
+  
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  background-color: #B0C4DE;
+  margin: 0px 34%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: center;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: all ease-in-out 250ms;
+  font-size: 17px;
+}
+
+.tab button:after{
+  background-color:var(--orangered);
+  bottom: -1em;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #D2691E;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #D2691E;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: block;
+  padding: 6px 12%;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
